@@ -118,10 +118,11 @@ TARGET_DEVICES += asus_rt-ac57u
 
 define Device/cudy_wr2100
   DTS := WR2100
-  IMAGE_SIZE := 15872k
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
   UIMAGE_NAME := R11
   DEVICE_TITLE := CUDY WR2100
-  DEVICE_PACKAGES := kmod-mt7603 kmod-mt7615e wpad-basic
+  DEVICE_PACKAGES := \
+	kmod-mt7603 kmod-mt7615e kmod-usb-ledtrig-usbport wpad-basic
 endef
 TARGET_DEVICES += cudy_wr2100
 
